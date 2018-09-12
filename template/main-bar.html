@@ -1,0 +1,46 @@
+<div role="navigation">
+	<div class="inner">
+<ul class="nav-main linklist main-bar" role="menubar">
+					<!-- EVENT navbar_header_quick_links_before -->
+					<!-- IF not S_IS_BOT and (S_DISPLAY_MEMBERLIST or U_TEAM) -->
+						<!-- IF S_DISPLAY_MEMBERLIST -->
+							<li>
+								<a href="{U_MEMBERLIST}" role="menuitem">
+									<span>{L_MEMBERLIST}</span>
+								</a>
+							</li>
+						<!-- ENDIF -->
+						<!-- IF U_TEAM -->
+							<li>
+								<a href="{U_TEAM}" role="menuitem">
+									<span>{L_THE_TEAM}</span>
+								</a>
+							</li>
+						<!-- ENDIF -->
+					<!-- ENDIF -->
+
+					<!-- EVENT navbar_header_quick_links_after -->
+		<!-- EVENT overall_header_navigation_prepend -->
+		<li <!-- IF not S_USER_LOGGED_IN -->data-skip-responsive="true"<!-- ELSE -->data-last-responsive="true"<!-- ENDIF -->>
+			<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
+				<span>{L_FAQ}</span>
+			</a>
+		</li>
+		<!-- EVENT overall_header_navigation_append -->
+		<!-- IF U_ACP -->
+			<li data-last-responsive="true">
+				<a href="{U_ACP}" title="{L_ACP}" role="menuitem">
+					<span>{L_ACP_SHORT}</span>
+				</a>
+			</li>
+		<!-- ENDIF -->
+		<!-- IF U_MCP -->
+			<li data-last-responsive="true">
+				<a href="{U_MCP}" title="{L_MCP}" role="menuitem">
+					<span>{L_MCP_SHORT}</span>
+				</a>
+			</li>
+		<!-- ENDIF -->
+		</ul>
+		</div>
+		</div>

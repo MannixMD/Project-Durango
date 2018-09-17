@@ -82,6 +82,7 @@ ul.forums {
     background-color: #107c10;
     margin: 2px;
     color: #f1f1f1;
+    border-radius: 1px;	
 }
 .xbox-layout li.row:hover {
     box-shadow: 0 0 10px #107c10;
@@ -89,13 +90,12 @@ ul.forums {
 .xbox-layout dl {
     display: block;
     position: relative;
-    min-height: 110px;
+    min-height: 125px;
     margin: 2px;
     padding: 10px 8px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: inherit;
-    transition: border 0.20s ease-in-out 0s;
 }
 dl.row-item {
 	background-size: 65px;
@@ -122,7 +122,7 @@ dd.topics, dd.views {
 }
 dd.posts {
     position: absolute;
-    right: 80px;
+    right: 95px;
     bottom: -2px;
 }
 dd.redirect {
@@ -130,7 +130,7 @@ dd.redirect {
     margin: 0 0 0 58px;
 }
 .xbox-layout dl .list-inner {
-    margin: 0 0 8px 47px;
+    margin: 0 0 0 47px;
     padding: 0;
     font-size: 12px;
 }
@@ -139,6 +139,7 @@ a.forumtitle {
 }
 dd.posts, dd.topics, dd.views {
     float: left;
+    font-weight: bold;	
 }
 li.header dl.row-item dt .list-inner {
     padding-left: 0;
@@ -163,6 +164,7 @@ dl.row-item dt .list-inner {
     margin: 5px 0;
     width: 32%;
     display: inline-grid;
+    border-radius: 1px;	
 }
 .button .icon, .button-secondary {
     color: #f1f1f1;
@@ -871,6 +873,7 @@ table.table1 tbody tr {
 }
 .xbox-layout.pmlist li.row {
     width: 31.8%;
+    border-radius: 1px;	
 }
 .panel-container .panel li.row {
     border-width: 0 3px;
@@ -903,6 +906,7 @@ table.table1 tbody tr {
 }
 .xbox-layout.mcplist li.row {
     width: 32.2%;
+    border-radius: 1px;	
 }
 thead {
     background-color: #3a3a3a;
@@ -977,9 +981,12 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 	font-weight: normal;
 	font-size: 13px;
 }
-.cplist .row .pagination {
-    display: contents;
+dd.lastpost.search {
+    padding-left: 62px;
 }
+.row .pagination li a, .row .pagination li span {
+		padding: 4px 6px;
+	}
 /* Responsive adjustments */
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
 	.cp-menu, .cp-main {
@@ -1000,13 +1007,10 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 	.lastpost .icon {
 		font-size: 17px;
 	}
-	.row .pagination li a, .row .pagination li span {
-		padding: 4px 6px;
-	}
 	.stat-block {
 		width: 100%;
-		margin: 2px 0;
-		padding: 0 1px;
+		padding: 0 5px;
+		margin: 2px -5px;
 	}
 	.stat-block p {
 		padding: 0 5px;

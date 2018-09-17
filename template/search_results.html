@@ -66,9 +66,6 @@
 			<li class="header">
 				<dl class="row-item">
 					<dt><div class="list-inner">{L_TOPICS}</div></dt>
-					<dd class="posts">{L_REPLIES}</dd>
-					<dd class="views">{L_VIEWS}</dd>
-					<dd class="lastpost"><span>{L_LAST_POST}</span></dd>
 				</dl>
 			</li>
 		</ul>
@@ -88,6 +85,11 @@
 								</a>
 							<!-- ENDIF -->
 							<a href="{searchresults.U_VIEW_TOPIC}" class="topictitle">{searchresults.TOPIC_TITLE}</a>
+							<!-- IF not S_IS_BOT -->
+								<a href="{searchresults.U_LAST_POST}" title="{L_GOTO_LAST_POST}">
+									<i class="icon fa-external-link-square fa-fw icon-lightgray" aria-hidden="true"></i><span class="sr-only">{VIEW_LATEST_POST}</span>
+								</a>
+							<!-- ENDIF -->
 							<!-- IF searchresults.S_TOPIC_UNAPPROVED or searchresults.S_POSTS_UNAPPROVED -->
 								<a href="{searchresults.U_MCP_QUEUE}" title="{L_TOPIC_UNAPPROVED}">
 									<i class="icon fa-question fa-fw icon-black" aria-hidden="true"></i><span class="sr-only">{L_TOPIC_UNAPPROVED}</span>
@@ -106,15 +108,8 @@
 							<br />
 							<!-- EVENT topiclist_row_topic_title_after -->
 
-							<!-- IF not S_IS_BOT -->
-								<div class="responsive-show" style="display: none;">
-									{L_LAST_POST} {L_POST_BY_AUTHOR} {searchresults.LAST_POST_AUTHOR_FULL} &laquo; <a href="{searchresults.U_LAST_POST}" title="{L_GOTO_LAST_POST}">{searchresults.LAST_POST_TIME}</a>
-									<br />{L_POSTED} {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a>
-								</div>
-							<!-- IF searchresults.TOPIC_REPLIES --><span class="responsive-show left-box" style="display: none;">{L_REPLIES}{L_COLON} <strong>{searchresults.TOPIC_REPLIES}</strong></span><!-- ENDIF -->
-							<!-- ENDIF -->
 
-							<div class="responsive-hide left-box">
+							<div class="left-box">
 								<!-- IF searchresults.S_HAS_POLL --><i class="icon fa-bar-chart fa-fw" aria-hidden="true"></i><!-- ENDIF -->
 								<!-- IF searchresults.ATTACH_ICON_IMG --><i class="icon fa-paperclip fa-fw" aria-hidden="true"></i><!-- ENDIF -->
 								{L_POST_BY_AUTHOR} {searchresults.TOPIC_AUTHOR_FULL} &raquo; {searchresults.FIRST_POST_TIME} &raquo; {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a>
@@ -141,16 +136,6 @@
 					</dt>
 					<dd class="posts">{searchresults.TOPIC_REPLIES} <dfn>{L_REPLIES}</dfn></dd>
 					<dd class="views">{searchresults.TOPIC_VIEWS} <dfn>{L_VIEWS}</dfn></dd>
-					<dd class="lastpost">
-						<span><dfn>{L_LAST_POST} </dfn>{L_POST_BY_AUTHOR} {searchresults.LAST_POST_AUTHOR_FULL}
-							<!-- IF not S_IS_BOT -->
-								<a href="{searchresults.U_LAST_POST}" title="{L_GOTO_LAST_POST}">
-									<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">{VIEW_LATEST_POST}</span>
-								</a>
-							<!-- ENDIF -->
-							<br />{searchresults.LAST_POST_TIME}
-						</span>
-					</dd>
 				</dl>
 			</li>
 			<!-- EVENT search_results_topic_after -->

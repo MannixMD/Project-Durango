@@ -37,7 +37,7 @@ select {
     border-color: transparent;
 	padding-top: 0 ;
 }
-.content, dl.faq dt, .pagination, .panel-container table.table1 thead th, ul.topiclist li, .panel-container .panel li.header dd, .panel-container .panel li.header dt, dl.mini dt, dl.details dd, h2, .forumbg .header a, .forabg .header a, th a, a, label, .codebox code, .content h2, .panel h2, .message-box textarea, dl.file dd, dd label, .time-zone {
+.phpbb_alert p, .content, dl.faq dt, .pagination, .panel-container table.table1 thead th, ul.topiclist li, .panel-container .panel li.header dd, .panel-container .panel li.header dt, dl.mini dt, dl.details dd, h2, .forumbg .header a, .forabg .header a, th a, a, label, .codebox code, .content h2, .panel h2, .message-box textarea, dl.file dd, dd label, .time-zone {
     color: #f1f1f1;
 }
 .forumbg .header a:hover, .forabg .header a:hover, th a:hover, a:hover, a:focus, a:active {
@@ -52,7 +52,7 @@ select {
     margin-left: 3px;	
 }
 h3 {
-    border-bottom-color: #c2c2c2;
+    border-bottom-color: #5dc21e;
     color: #f1f1f1;
 	text-align: center;
 }
@@ -363,14 +363,14 @@ a.header-avatar span:after{
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
 }
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #3a3a3a;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #5dc21e;
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
@@ -597,6 +597,7 @@ div.rules {
 .pagination li.active span {
     background: #107c10;
     border-color: #107c10;
+    font-weight: bold;	
 }
 .jumpbox .dropdown li {
     border-top-color: #c2c2c2;
@@ -675,7 +676,7 @@ blockquote blockquote {
 }
 a.button1, input.button1, a.button2, input.button2, input.button3 {
     border-color: #5dc21e;
-    border-radius: 5px;	
+    border-radius: 10px;	
 }
 a.button1, input.button1, input.button3, a.button2, input.button2 {
     color: #f1f1f1;
@@ -683,10 +684,19 @@ a.button1, input.button1, input.button3, a.button2, input.button2 {
     background-image: none;
 }
 a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
-    border-color: #107c10;
+    border-color: #5dc21e;
     color: #000000;
     background-color: #5dc21e;
     background-image: none;
+}
+a.button2, input.button2, input.button3 {
+    border: 2px solid transparent;
+}
+a.button1, input.button1 {
+    border: 2px solid transparent;
+}
+a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
+    border: 2px solid transparent;
 }
 .tabs .tab > a {
     background: #107c10;
@@ -708,8 +718,8 @@ a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, inpu
 }
 .online {
     background-image: none !important;
-    border-right: 5px solid #107c10;
-    border-left: 5px solid #107c10;
+    border-right: 5px solid #5dc21e;
+    border-left: 5px solid #5dc21e;
 }
 .offline {
 	background-image: none;
@@ -763,7 +773,7 @@ p.post-notice {
     cursor: pointer;
     float: right;
     position: relative;
-    z-index: 9998;
+    z-index: 0;
     margin-top: -18px;
 }
 .trigger:before {
@@ -931,7 +941,7 @@ dd textarea {
     border-color: #107c10;
 }
 input.button1:focus, input.button2:focus, input.button3:focus {
-    border-color: #107c10;
+    border-color: #5dc21e;
     color: #000000;
     background-color: #5dc21e;
 }
@@ -987,6 +997,22 @@ dd.lastpost.search {
 .row .pagination li a, .row .pagination li span {
 		padding: 4px 6px;
 	}
+.phpbb_alert {
+    background-color: #3a3a3a;
+    border-color: #5dc21e;
+}
+.alert_close .icon:before {
+	color: #5dc21e
+}
+.pagination li.ellipsis span {
+    color: #ffffff;
+}
+fieldset.quick-login input.inputbox {
+    background-color: #3a3a3a;
+}
+.error {
+    color: #5dc21e;
+}
 /* Responsive adjustments */
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
 	.cp-menu, .cp-main {

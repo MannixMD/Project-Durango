@@ -37,7 +37,7 @@ select {
     border-color: transparent;
 	padding-top: 0 ;
 }
-.phpbb_alert p, .content, dl.faq dt, .pagination, .panel-container table.table1 thead th, ul.topiclist li, .panel-container .panel li.header dd, .panel-container .panel li.header dt, dl.mini dt, dl.details dd, h2, .forumbg .header a, .forabg .header a, th a, a, label, .codebox code, .content h2, .panel h2, .message-box textarea, dl.file dd, dd label, .time-zone {
+.postbody, .author, .phpbb_alert p, .content, dl.faq dt, .pagination, .panel-container table.table1 thead th, ul.topiclist li, .panel-container .panel li.header dd, .panel-container .panel li.header dt, dl.mini dt, dl.details dd, h2, .forumbg .header a, .forabg .header a, th a, a, label, .codebox code, .content h2, .panel h2, .message-box textarea, dl.file dd, dd label, .time-zone {
     color: #f1f1f1;
 }
 .forumbg .header a:hover, .forabg .header a:hover, th a:hover, a:hover, a:focus, a:active {
@@ -55,6 +55,16 @@ h3 {
     border-bottom-color: #5dc21e;
     color: #f1f1f1;
 	text-align: center;
+}
+hr {
+    border-color: #5dc21e;
+    border-top-color: #5dc21e;
+}
+li.row:hover {
+    background-color: #3a3a3a;
+}
+li.reported:hover {
+    background-color: #107c10 !important;
 }
 .xbox-layout {
     padding: 0;
@@ -674,8 +684,17 @@ blockquote blockquote {
     background-color: #3a3a3a;
     color: #f1f1f1;
 }
+a.button2, input.button2, input.button3 {
+    border: 2px solid transparent;
+}
+a.button1, input.button1 {
+    border: 2px solid transparent;
+}
+a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
+    border: 2px solid transparent;
+}
 a.button1, input.button1, a.button2, input.button2, input.button3 {
-    border-color: #5dc21e;
+    border-color: #107c10;
     border-radius: 10px;	
 }
 a.button1, input.button1, input.button3, a.button2, input.button2 {
@@ -689,14 +708,8 @@ a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, inpu
     background-color: #5dc21e;
     background-image: none;
 }
-a.button2, input.button2, input.button3 {
-    border: 2px solid transparent;
-}
-a.button1, input.button1 {
-    border: 2px solid transparent;
-}
-a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
-    border: 2px solid transparent;
+.caret {
+    border-color: #5dc21e;
 }
 .tabs .tab > a {
     background: #107c10;
@@ -1013,6 +1026,21 @@ fieldset.quick-login input.inputbox {
 .error {
     color: #5dc21e;
 }
+.attach-image img {
+    border-color: #f1f1f1;
+}
+.attachbox dd {
+    border-top-color: #107c10;
+}
+table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd) {
+    background-color: #6b6b6b;
+}
+
+.pollbar1, .pollbar2, .pollbar3, .pollbar4, .pollbar5 {
+    background-color: #5dc21e;
+    border-bottom-color: #107c10;
+    border-right-color: #107c10;
+}
 /* Responsive adjustments */
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
 	.cp-menu, .cp-main {
@@ -1028,7 +1056,6 @@ fieldset.quick-login input.inputbox {
 @media (max-width: 700px) {
 	.xbox-layout li.row, .xbox-layout.mcplist li.row, .xbox-layout.pmlist li.row {
     width: 100%;
-    margin: 2px 0;
 }
 	.lastpost .icon {
 		font-size: 17px;

@@ -1055,7 +1055,8 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.
 }
 @media (max-width: 700px) {
 	.xbox-layout li.row, .xbox-layout.mcplist li.row, .xbox-layout.pmlist li.row {
-    width: 100%;
+		width: 100%;
+		margin: 2px 0;	
 }
 	.lastpost .icon {
 		font-size: 17px;
@@ -1069,7 +1070,12 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.
 		padding: 0 5px;
 	}
 	.top-column, .bottom-column {
-    display: block;
+		display: block;
+}
+	.statistics {
+		border-radius: 0;
+		margin-left: -5px;
+		margin-right: -5px;
 }
 }
 @media (min-width: 701px) and (max-width: 977px){

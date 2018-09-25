@@ -45,11 +45,11 @@ select {
 	text-decoration: none;
 }
 .forum-name {
-    font-size: 12px;
+    font-size: 15px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 300;
     color: #f1f1f1;
-    margin-left: 3px;	
+    margin-left: 3px;
 }
 h3 {
     border-bottom-color: #5dc21e;
@@ -193,6 +193,9 @@ dl.row-item dt .list-inner {
 }
 .icon.icon-green, a:hover .icon.icon-green{
 	color: #107c10
+}
+.icon.icon-red, a:hover .icon.icon-red {
+    color: #a20000;
 }
 dfn {
     font-style: normal;
@@ -1041,6 +1044,54 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.
     border-bottom-color: #107c10;
     border-right-color: #107c10;
 }
+.minitabs .tab > a {
+    background-color: #107c10;
+}
+.minitabs .activetab > a, .minitabs .activetab > a:hover {
+    background-color: #5dc21e;
+    color: #000000;
+}
+.minitabs .tab > a:hover {
+    background-color: #5dc21e;
+    color: #000000;
+}
+.footer-row {
+    color: #5dc21e;
+}
+.copyright strong {
+    color: #5dc21e;
+}
+.pm .author, .pm h3 {
+    color: #000;
+}
+.panel-container .panel li.row.pm_replied_colour {
+    outline: 1px solid #c2c2c2;
+}
+.panel-container .panel li.row.pm_marked_colour {
+    outline: 1px solid #5dc21e;
+}
+.panel-container .panel li.row.pm_friend_colour {
+    outline: 1px solid #f1f1f1;
+}
+.panel-container .panel li.row.pm_foe_colour {
+    outline: 1px solid #000000;
+}
+
+.pmlist li.pm_replied_colour, .pm_replied_colour {
+	border-color: #c2c2c2;
+}
+
+.pmlist li.pm_marked_colour, .pm_marked_colour {
+	border-color: #5dc21e;
+}
+.pmlist li.pm_friend_colour, .pm_friend_colour {
+	border-color: #f1f1f1;
+}
+
+.pmlist li.pm_foe_colour, .pm_foe_colour {
+	border-color: #000000;
+}
+
 /* Responsive adjustments */
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
 	.cp-menu, .cp-main {
@@ -1091,4 +1142,13 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.
 	.stat-block {
 		width: 31.2%;
 	}
+}
+.listview .row {
+	width: 100% !important;
+}
+.listview dl {
+	min-height: 95px;
+}
+dt.listview-image {
+    background-position: 0 35% !important;
 }

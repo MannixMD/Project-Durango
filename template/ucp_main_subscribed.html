@@ -12,7 +12,7 @@
 
 				<h2 class="forum-name">{L_WATCHED_FORUMS}</h2>
 	
-	<ul class="xbox-layout cplist missing-column">
+	<ul class="xbox-layout <!-- IF $LISTVIEW == 'yes'--> listview <!-- ENDIF --> cplist missing-column">
 
 	<!-- BEGIN forumrow -->
 		<li class="row<!-- IF forumrow.S_ROW_COUNT is odd --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
@@ -57,12 +57,12 @@
 
 <!-- IF .topicrow -->
 <h2 class="forum-name">{L_WATCHED_TOPICS}</h2>
-	<ul class="xbox-layout cplist missing-column">
+	<ul class="xbox-layout <!-- IF $LISTVIEW == 'yes'--> listview <!-- ENDIF --> cplist missing-column">
 
 	<!-- BEGIN topicrow -->
 		<li class="row<!-- IF topicrow.S_TOPIC_REPORTED --> reported<!-- ELSEIF topicrow.S_ROW_COUNT is odd --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
 			<dl class="row-item {topicrow.TOPIC_IMG_STYLE}">
-				<dt<!-- IF topicrow.TOPIC_ICON_IMG --> style="background-image: url({T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF --> title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
+				<dt <!-- IF $LISTVIEW == 'yes'--> class="listview-image" <!-- ENDIF --><!-- IF topicrow.TOPIC_ICON_IMG --> style="background-image: url({T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF --> title="{topicrow.TOPIC_FOLDER_IMG_ALT}">
 					<!-- IF topicrow.S_UNREAD_TOPIC --><a href="{topicrow.U_NEWEST_POST}" class="row-item-link"></a><!-- ENDIF -->
 					<div class="list-inner">
 						<!-- IF topicrow.S_UNREAD_TOPIC -->

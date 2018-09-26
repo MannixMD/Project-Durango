@@ -21,6 +21,7 @@ select {
     background-color: #107c10;
     color: #f1f1f1;
 }
+
 .user-bar .no-avatar {
     background-image: url("./images/forum_unread.svg");
     background-size: 40px;
@@ -137,7 +138,7 @@ dd.posts {
 }
 dd.redirect {
     line-height: 0;
-    margin: 0 0 0 58px;
+    margin: 10px 0 0 58px;
 }
 .xbox-layout dl .list-inner {
     margin: 0 0 0 47px;
@@ -1100,6 +1101,9 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.
 }
 .gallery label img {
 	max-width: 120px;
+}
+.reported {
+    outline: 1px solid #fff900;
 }
 /* Responsive adjustments */
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {

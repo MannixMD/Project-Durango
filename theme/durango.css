@@ -1091,7 +1091,16 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.
 .pmlist li.pm_foe_colour, .pm_foe_colour {
 	border-color: #000000;
 }
-
+.gallery label {
+    background: #107c10;
+    border-color: #5dc21e;
+}
+.gallery label:hover {
+    background-color: #5dc21e;
+}
+.gallery label img {
+	max-width: 120px;
+}
 /* Responsive adjustments */
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
 	.cp-menu, .cp-main {

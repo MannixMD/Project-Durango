@@ -38,7 +38,7 @@ select {
     border-color: transparent;
 	padding-top: 0 ;
 }
-.postbody, .author, .phpbb_alert p, .content, dl.faq dt, .pagination, .panel-container table.table1 thead th, ul.topiclist li, .panel-container .panel li.header dd, .panel-container .panel li.header dt, dl.mini dt, dl.details dd, h2, .forumbg .header a, .forabg .header a, th a, a, label, .codebox code, .content h2, .panel h2, .message-box textarea, dl.file dd, dd label, .time-zone {
+.postbody, .phpbb_alert p, .content, dl.faq dt, .pagination, .panel-container table.table1 thead th, ul.topiclist li, .panel-container .panel li.header dd, .panel-container .panel li.header dt, dl.mini dt, dl.details dd, h2, .forumbg .header a, .forabg .header a, th a, a, label, .codebox code, .content h2, .panel h2, .message-box textarea, dl.file dd, dd label, .time-zone {
     color: #f1f1f1;
 }
 .forumbg .header a:hover, .forabg .header a:hover, th a:hover, a:hover, a:focus, a:active {
@@ -141,15 +141,14 @@ dd.redirect {
     margin: 10px 0 0 58px;
 }
 .xbox-layout dl .list-inner {
-    margin: 0 0 0 47px;
+    margin: 0 0 10px 47px;
     padding: 0;
     font-size: 12px;
 }
 a.forumtitle {
-    font-size: 1.7em;
+    font-size: 1.2em;
 }
 dd.posts, dd.topics, dd.views {
-    float: left;
     font-weight: bold;	
 }
 li.header dl.row-item dt .list-inner {
@@ -684,6 +683,10 @@ blockquote blockquote {
     background-color: #5dc21e;
     color: #000;
 }
+blockquote blockquote blockquote {
+    background-color: #107c10;
+    color: #f1f1f1;
+}
 .panel {
     background-color: #3a3a3a;
     color: #f1f1f1;
@@ -1031,7 +1034,7 @@ fieldset.quick-login input.inputbox {
     color: #5dc21e;
 }
 .attach-image img {
-    border-color: #f1f1f1;
+    border-color: #107c10;
 }
 .attachbox dd {
     border-top-color: #107c10;
@@ -1104,6 +1107,27 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.
 }
 .reported {
     outline: 1px solid #fff900;
+}
+.rules .postlink {
+    color: #f1f1f1;
+    border-bottom-color: #f1f1f1;
+}
+.signature {
+    border-top-color: #5dc21e;
+    color: #3a3a3a;	
+}
+.author {
+	color: #3a3a3a;
+}
+fieldset.polls dl {
+    border-top-color: #5dc21e;
+    color: #f1f1f1;
+}
+.content h2, .panel h2 {
+    border-bottom-color: #5dc21e;
+}
+.row-item .topictitle:hover, .row-item .subforum:hover, .row-item .username:hover, .row-item .username-coloured:hover {
+    text-decoration: none;
 }
 /* Responsive adjustments */
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {

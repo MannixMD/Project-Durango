@@ -66,7 +66,7 @@ li.row:hover {
     background-color: #3a3a3a;
 }
 li.reported:hover {
-    background-color: #107c10 !important;
+	background-color: rgba(255, 249, 0, 0.30196078431372547) !important;
 }
 li.row strong {
     color: #c2c2c2;
@@ -101,7 +101,7 @@ ul.forums {
     border-radius: 1px;	
 }
 .xbox-layout li.row:hover {
-    box-shadow: 0 0 10px #107c10;
+	outline: 1px solid #5dc21e;
 }
 .xbox-layout dl {
     display: block;
@@ -541,8 +541,8 @@ nav > ul > li:hover ul {
 }
 .dropdown .dropdown-contents {
     background: #107c10;
-    border-color: #3a3a3a;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+    border-color: #107c10;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.75);
 }
 .dropdown-extended .header {
     background-color: #107c10;
@@ -643,7 +643,7 @@ div.rules {
     color: #000000;
 }
 .dropdown .pointer {
-    border-color: #3a3a3a transparent;
+    border-color: #107c10 transparent;
 }
 .dropdown .pointer-inner {
     border-color: #107c10 transparent;
@@ -656,9 +656,6 @@ div.rules {
 }
 .postbody a {
     color: #000;
-}
-.postbody a:hover {
-    color: #f1f1f1;
 }
 .postprofile a {
     color: #333333;
@@ -765,8 +762,11 @@ p.post-notice {
     background-image: url("./images/forum_unread.svg");
     height: 90px;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center;
     background-size: 90px;
+}
+.postprofile .no-avatar .avatar-container {
+    margin-bottom: 10px;
 }
 @media (max-width: 700px){
 	.postprofile .no-avatar .avatar-container {
@@ -901,7 +901,7 @@ table.table1 td {
     background-color: #107c10;
 }
 table.table1 tbody tr {
-    border-color: #3a3a3a;
+    border: none;
 }
 .cp-menu {
     width: 17%;
@@ -1126,8 +1126,12 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.
 	max-width: 120px;
 }
 .reported {
-    outline: 1px solid #fff900;
+	background-image: linear-gradient(to bottom, #fff900 0, rgba(255, 249, 0, 0.30196078431372547) 2%, rgba(255, 0, 100, 0) 25%, rgba(255, 0, 100, 0) 75%, rgba(255, 249, 0, 0.30196078431372547) 98%, rgb(255, 249, 0) 100%) !important;
 }
+.reported.bg1, .reported.bg2 {
+    background: #fff900;
+}
+
 .rules .postlink {
     color: #f1f1f1;
     border-bottom-color: #f1f1f1;
@@ -1135,6 +1139,9 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even), table.
 .signature {
     border-top-color: #5dc21e;
     color: #3a3a3a;	
+}
+.signature a, .signature a:hover{
+	background-color: #5dc21e;
 }
 .author {
 	color: #3a3a3a;
@@ -1213,6 +1220,26 @@ dl.details dt {
 .subforum-tools .dropdown-contents .icon {
 	font-size: 14px;
 }
+.postprofile a .avatar {
+    margin: 0 auto;
+}
+.postprofile .avatar {
+    float: none;
+}
+.postprofile {
+    text-align: center;
+}
+.postprofile .has-avatar .avatar-container {
+    margin-bottom: 10px;
+}
+.postbody h3 {
+    text-align: left;
+}
+table.table1 .bg3 td {
+	background-color: #5dc21e;
+    font-weight: bold;
+    color: #000;
+}
 /* Responsive adjustments */
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
 	.cp-menu, .cp-main {
@@ -1258,6 +1285,12 @@ dl.details dt {
     -webkit-line-clamp: inherit;
     max-height: inherit;
 }
+.postprofile .avatar {
+    float: left;
+}
+.postprofile {
+    text-align: left;
+}
 }
 @media (min-width: 701px) and (max-width: 977px){
 	.xbox-layout li.row, .xbox-layout.mcplist li.row, .xbox-layout.pmlist li.row{
@@ -1273,11 +1306,7 @@ dl.details dt {
 		width: 31.2%;
 	}
 }
-@media (max-width: 850px) {
-	.postbody {
-		width: 71%;
-}
-}
+
 
 .listview .row {
 	width: 100% !important;
@@ -1287,4 +1316,9 @@ dl.details dt {
 }
 dt.listview-image {
     background-position: 0 35% !important;
+}
+.loading_indicator {
+    background-color: transparent;
+    background-image: url(./images/xbox.gif);
+	background-size: 50px;
 }

@@ -99,6 +99,7 @@ jQuery("#forums").detach().appendTo('#mark-forums')
 jQuery("#topics").detach().appendTo('#mark-forums')
 
 </script>
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -126,6 +127,7 @@ window.onclick = function(event) {
     }
 }
 </script>
+<!-- ENDIF -->
 <script>
 function calcWidth() {
   var navwidth = 0;

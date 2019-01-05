@@ -64,13 +64,13 @@
 	<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
 </div>
 
-<script type="text/javascript" src="{T_JQUERY_LINK}"></script>
-<!-- IF S_ALLOW_CDN --><script type="text/javascript">window.jQuery || document.write('\x3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}">\x3C/script>');</script><!-- ENDIF -->
-<script type="text/javascript" src="{T_ASSETS_PATH}/javascript/core.js?assets_version={T_ASSETS_VERSION}"></script>
+<script src="{T_JQUERY_LINK}"></script>
+<!-- IF S_ALLOW_CDN --><script>window.jQuery || document.write('\x3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}">\x3C/script>');</script><!-- ENDIF -->
+<script src="{T_ASSETS_PATH}/javascript/core.js?assets_version={T_ASSETS_VERSION}"></script>
 <!-- INCLUDEJS forum_fn.js -->
 <!-- INCLUDEJS ajax.js -->
 <!-- IF S_ALLOW_CDN -->
-	<script type="text/javascript">
+	<script>
 		(function($){
 			var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
 				$span = $('<span class="fa" style="display:none"></span>').appendTo('body');
@@ -99,6 +99,7 @@ jQuery("#forums").detach().appendTo('#mark-forums')
 jQuery("#topics").detach().appendTo('#mark-forums')
 
 </script>
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -126,6 +127,7 @@ window.onclick = function(event) {
     }
 }
 </script>
+<!-- ENDIF -->
 <script>
 function calcWidth() {
   var navwidth = 0;
@@ -185,10 +187,10 @@ $(window).on('resize load',function(){
 <!-- ENDIF -->
 
 <!-- EVENT overall_footer_after -->
-<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery.cookie.js"></script>
-<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery.collapse.js"></script>
+<script  src="{T_TEMPLATE_PATH}/jquery.cookie.js"></script>
+<script  src="{T_TEMPLATE_PATH}/jquery.collapse.js"></script>
 
-<script type="text/javascript">
+<script>
         $(".forumlist").collapse({show: function(){
                 this.animate({
                     opacity: 'toggle',

@@ -1322,3 +1322,10 @@ dt.listview-image {
     background-image: url(./images/xbox.gif);
 	background-size: 50px;
 }
+.forum-image {
+    padding-top: 0;
+}
+
+.copyright {
+    color: #5dc21e;
+}

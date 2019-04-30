@@ -133,7 +133,11 @@
 					<dd class="topics">{forumrow.TOPICS} <dfn>{L_TOPICS}</dfn></dd>
 					<dd class="posts">{forumrow.POSTS} <dfn>{L_POSTS}</dfn></dd>
 					<!-- ELSE -->
-					<dd class="no-posts"><dfn>{L_NO_POSTS}</dfn></dd>
+					<dd class="no-posts"><dfn>							{% if forumrow.U_UNAPPROVED_TOPICS %}
+								{{ lang('TOPIC_UNAPPROVED_FORUM', forumrow.TOPICS) }}
+							{% else %}
+								{{ lang('NO_POSTS') }}
+							{% endif %}</dfn></dd>
 							<!-- ENDIF -->
 				<!-- ELSE -->
 					<dd>&nbsp;</dd>

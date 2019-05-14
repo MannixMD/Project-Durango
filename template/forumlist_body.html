@@ -6,20 +6,15 @@
 			</div>
 		</div>
 	<!-- ENDIF -->
+
 	<!-- EVENT forumlist_body_category_header_before -->
 	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW  or forumrow.S_NO_CAT  -->
 		<div class="forabg xbox-layout <!-- IF $LISTVIEW == 'yes'--> listview <!-- ENDIF -->">
 			<div class="inner">
-			
-				
 					<!-- EVENT forumlist_body_category_header_row_prepend -->
-					
 						<h2 class="forum-name"><!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF --></h2>
-						
-					
 					<!-- EVENT forumlist_body_category_header_row_append -->
-				
-			
+
 			<!-- IF SCRIPT_NAME eq 'index' or 'viewforum' --><div class="trigger active"></div><!-- ENDIF -->
             <div class="collapsethis">
 			<ul class="forums">
@@ -57,7 +52,7 @@
 								<!-- ENDIF -->
 							<!-- ENDIF -->
 							<div class="mod-status">
-														<!-- IF forumrow.U_UNAPPROVED_TOPICS -->
+							<!-- IF forumrow.U_UNAPPROVED_TOPICS -->
 								<a href="{forumrow.U_UNAPPROVED_TOPICS}" title="{L_TOPICS_UNAPPROVED}">
 									<i class="icon fa-question fa-fw icon-black" aria-hidden="true"></i><span class="sr-only">{L_TOPICS_UNAPPROVED}</span>
 								</a>
@@ -73,7 +68,6 @@
 							<div class="moderators"><strong>{forumrow.L_MODERATOR_STR}{L_COLON}</strong> {forumrow.MODERATORS}
 						</div>
 						<!-- ENDIF -->
-
 
 						<!-- IF .forumrow.subforum and forumrow.S_LIST_SUBFORUMS -->
 							<!-- EVENT forumlist_body_subforums_before -->
@@ -97,14 +91,14 @@
 	<div class="dropdown hidden" style="display: none; margin-right: -1439.61px;">
 		<div class="pointer"><div class="pointer-inner"></div></div>
 		<div class="dropdown-contents dropdown-nonscroll" style="margin-left: 0px; left: 0px; margin-right: 0px; right: 0px; max-width: 1268px;">
-							<div class="moderators"><strong>{forumrow.L_MODERATOR_STR}{L_COLON}</strong> {forumrow.MODERATORS}
-						</div>
+			<div class="moderators"><strong>{forumrow.L_MODERATOR_STR}{L_COLON}</strong> {forumrow.MODERATORS}
+			</div>
 		</div>
 	</div>
 </div>
 <!-- ENDIF -->
 
-						<!-- IF .forumrow.subforum and forumrow.S_LIST_SUBFORUMS -->
+<!-- IF .forumrow.subforum and forumrow.S_LIST_SUBFORUMS -->
 <div class="dropdown-container dropdown-container-left dropdown-button-control subforum-tools dropdown-right dropdown-down">
 	<span title="{forumrow.L_SUBFORUM_STR}" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
 		<i class="icon fa-sitemap fa-fw" aria-hidden="true"></i>
@@ -114,10 +108,10 @@
 		<div class="dropdown-contents dropdown-nonscroll" style="margin-left: 0px; left: 0px; margin-right: 0px; right: 0px; max-width: 1268px;">
 <!-- EVENT forumlist_body_subforums_before -->
 		<!-- BEGIN subforum -->
-								<!-- EVENT forumlist_body_subforum_link_prepend --><a href="{forumrow.subforum.U_SUBFORUM}" class="subforum<!-- IF forumrow.subforum.S_UNREAD --> unread<!-- ELSE --> read<!-- ENDIF -->" title="<!-- IF forumrow.subforum.S_UNREAD -->{L_UNREAD_POSTS}<!-- ELSE -->{L_NO_UNREAD_POSTS}<!-- ENDIF -->">
-									<i class="icon <!-- IF forumrow.subforum.IS_LINK -->fa-external-link<!-- ELSE -->fa-file<!-- ENDIF --> fa-fw <!-- IF forumrow.subforum.S_UNREAD --> icon-yellow<!-- ELSE --> icon-lightgray<!-- ENDIF --> icon-md" aria-hidden="true"></i>{forumrow.subforum.SUBFORUM_NAME}</a><!-- IF not forumrow.subforum.S_LAST_ROW -->{L_COMMA_SEPARATOR}<!-- ENDIF --><!-- EVENT forumlist_body_subforum_link_append -->
-							<!-- END subforum -->
-							<!-- EVENT forumlist_body_subforums_after -->
+		<!-- EVENT forumlist_body_subforum_link_prepend --><a href="{forumrow.subforum.U_SUBFORUM}" class="subforum<!-- IF forumrow.subforum.S_UNREAD --> unread<!-- ELSE --> read<!-- ENDIF -->" title="<!-- IF forumrow.subforum.S_UNREAD -->{L_UNREAD_POSTS}<!-- ELSE -->{L_NO_UNREAD_POSTS}<!-- ENDIF -->">
+		<i class="icon <!-- IF forumrow.subforum.IS_LINK -->fa-external-link<!-- ELSE -->fa-file<!-- ENDIF --> fa-fw <!-- IF forumrow.subforum.S_UNREAD --> icon-yellow<!-- ELSE --> icon-lightgray<!-- ENDIF --> icon-md" aria-hidden="true"></i>{forumrow.subforum.SUBFORUM_NAME}</a><!-- IF not forumrow.subforum.S_LAST_ROW -->{L_COMMA_SEPARATOR}<!-- ENDIF --><!-- EVENT forumlist_body_subforum_link_append -->
+		<!-- END subforum -->
+		<!-- EVENT forumlist_body_subforums_after -->
 		</div>
 	</div>
 </div>
@@ -133,11 +127,13 @@
 					<dd class="topics">{forumrow.TOPICS} <dfn>{L_TOPICS}</dfn></dd>
 					<dd class="posts">{forumrow.POSTS} <dfn>{L_POSTS}</dfn></dd>
 					<!-- ELSE -->
-					<dd class="no-posts"><dfn>							{% if forumrow.U_UNAPPROVED_TOPICS %}
+					<dd class="no-posts">
+						<dfn>{% if forumrow.U_UNAPPROVED_TOPICS %}
 								{{ lang('TOPIC_UNAPPROVED_FORUM', forumrow.TOPICS) }}
 							{% else %}
 								{{ lang('NO_POSTS') }}
-							{% endif %}</dfn></dd>
+							{% endif %}</dfn>
+					</dd>
 							<!-- ENDIF -->
 				<!-- ELSE -->
 					<dd>&nbsp;</dd>

@@ -324,18 +324,16 @@ a.header-avatar span:after{
     font-size: 36px;
     margin-left: 50px;
 }
+
 .nav {
-	
 	margin-bottom: 15px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 700px) {
     .sidenav a {font-size: 15px;}
-	.sidenav {padding-top: 0;}
-	
+	.sidenav {padding-top: 0;}	
 }
-
 
 .user-bar ul {
     display: inline-flex;
@@ -1024,7 +1022,7 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 	font-weight: normal;
 	font-size: 13px;
 }
-.permissions h3:before, .permissions h3:after{
+.permissions h3:before, .permissions h3:after {
 	content: "\f0ca";
 	font-family: FontAwesome;
 	padding: 0 3px;
@@ -1035,8 +1033,8 @@ dd.lastpost.search {
     padding-left: 62px;
 }
 .row .pagination li a, .row .pagination li span {
-		padding: 4px 6px;
-	}
+	padding: 4px 6px;
+}
 .phpbb_alert {
     background-color: #3a3a3a;
     border-color: #5dc21e;
